@@ -4,7 +4,7 @@
 ![N|Solid](https://img.shields.io/github/license/ronnyjss/traducao?logo=github&logoColor=%23FFFFFF&style=flat-square&color=%2300ABFF&label=Licença)
 
 ![N|Solid](https://img.shields.io/github/tag/ronnyjss/utilitario?logo=github&logoColor=%23FFFFFF&style=flat-square&color=00ABFF&label=Versão)
-![N|Solid](https://github.com/ronnyjss/traducao/workflows/testing/badge.svg)
+![N|Solid](https://github.com/ronnyjss/traducao/actions/workflows/test.yaml/badge.svg)
 
 Criado por Ronny Santos ronny@jss.art.br (MIT License)
 
