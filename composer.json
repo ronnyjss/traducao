@@ -1,15 +1,13 @@
 {
 	"name":			"ronnyjss/traducao",
-	"version":		"1.0.0",
 	"description":	"Biblioteca para importar gettext de arquivos PO.",
 	"homepage":		"https://github.com/ronnyjss/traducao",
 	"keywords":		["gettext", "i18n", "translation", "po"],
 	"license":		"MIT",
 	"type":			"library",
-	"time":			"2021-11-26",
 	"authors": [{
 		"name":		"RonnyJSS",
-		"role":		"developer",
+		"role":		"Developer",
 		"email":	"ronny@jss.art.br",
 		"homepage":	"https://github.com/ronnyjss"
 	}],

@@ -12,12 +12,6 @@
 		"email":	"ronny@jss.art.br",
 		"homepage":	"https://github.com/ronnyjss"
 	}],
-	"repositories": [
-		{
-			"url": "https://github.com/ronnyjss/traducao.git",
-			"type": "git"
-		}
-	],
 	"require": {
 		"ronnyjss/traducao": "^1.0"
 	},
