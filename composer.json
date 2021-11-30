@@ -16,11 +16,11 @@
         "issues":	"https://github.com/ronnyjss/traducao/issues"
     },
 	"require": {
-		"php":				"^7.2|^8.0",
+		"php":				"^8.0",
 		"gettext/gettext":	"^5.6"
 	},
     "require-dev": {
-		"phpunit/phpunit": "^8.0|^9.0"
+		"phpunit/phpunit": "^9.0"
     },
 	"autoload": {
 		"psr-4": {
@@ -38,8 +38,29 @@
 		}
 	},
 	"scripts": {
+		"php56": [
+			"/usr/local/bin/ea-php56 /opt/cpanel/composer/bin/composer"
+		],
+		"php71": [
+			"/usr/local/bin/ea-php71 /opt/cpanel/composer/bin/composer"
+		],
+		"php72": [
+			"/usr/local/bin/ea-php72 /opt/cpanel/composer/bin/composer"
+		],
+		"php73": [
+			"/usr/local/bin/ea-php73 /opt/cpanel/composer/bin/composer"
+		],
+		"php74": [
+			"/usr/local/bin/ea-php74 /opt/cpanel/composer/bin/composer"
+		],
+		"php80": [
+			"/usr/local/bin/ea-php80 /opt/cpanel/composer/bin/composer"
+		],
 		"teste": [
 			"phpunit"
+		],
+		"testePHP80": [
+			"/opt/cpanel/ea-php80/root/usr/bin/php vendor/phpunit/phpunit/phpunit"
 		]
     }
 }

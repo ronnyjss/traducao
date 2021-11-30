@@ -1,6 +1,6 @@
 # Biblioteca de Tradução
 ![N|Solid](https://img.shields.io/badge/por-%40ronnyjss-RONNY?logo=xcode&logoColor=%23FFFFFF&style=flat-square&color=00ABFF)
-![N|Solid](https://img.shields.io/badge/PHP-%5E7.2-RONNY?logo=php&logoColor=%23FFFFFF&style=flat-square&color=00ABFF)
+![N|Solid](https://img.shields.io/badge/PHP-%5E8.0-RONNY?logo=php&logoColor=%23FFFFFF&style=flat-square&color=00ABFF)
 ![N|Solid](https://img.shields.io/github/license/ronnyjss/traducao?logo=github&logoColor=%23FFFFFF&style=flat-square&color=%2300ABFF&label=Licença)
 
 ![N|Solid](https://img.shields.io/badge/Packagist-ronnyjss/traducao-RONNY?logo=packagist&logoColor=%23FFFFFF&style=flat-square&color=00ABFF)
@@ -64,7 +64,7 @@ Traducao::adicionarPO(__DIR__ . '/linguagem');
 * pela respectiva tradução na linguagem atual.
 *
 * No primeiro parametro é informado a string que deve ser traduzida.
-* No segundo parametri é informado o dominio que incapsula o pacote da linguagem.
+* No segundo parametro é informado o dominio que incapsula o pacote da linguagem.
 *
 * Neste exemplo abaixo, ela irá retornar a frase:
 * 'Hello visitor, welcome to our system.'
