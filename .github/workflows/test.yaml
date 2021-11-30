@@ -37,13 +37,8 @@ jobs:
       - name: Instalar dependências
         run: composer install --prefer-dist --no-progress --no-suggest ${{ matrix.composer-args }}
 
-      - name: Gerar pacote de Linguagens
-         run: |
-             sudo locale-gen pt_BR.UTF-8
-             sudo locale-gen en_US.UTF-8
-             sudo locale-gen es_PY.UTF-8
-             sudo locale-gen ru_RU.UTF-8
-             sudo locale-gen af_ZA.UTF-8
-
       - name: Testes
-        run: composer teste
+        run: |
+           sudo apt-get update && sudo apt-get install tzdata locales -y && sudo locale-gen pt_BR.UTF-8 && sudo locale-gen en_US.UTF-8 && sudo locale-gen es_PY.UTF-8 && sudo locale-gen ru_RU.UTF-8 && sudo locale-gen af_ZA.UTF-8
+           sudo update-locale
+           composer teste
