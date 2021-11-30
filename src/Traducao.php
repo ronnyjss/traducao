@@ -40,6 +40,8 @@ class Traducao
 			$a_linguagem
 		);
 
+		var_dump(setlocale(LC_ALL, 0));
+
 		if(!isset($a_linguagem['linguagem']) || strlen($a_linguagem['linguagem']) < 2) $a_linguagem['linguagem'] = 'pt_BR';
 
 		if(strlen($a_linguagem['linguagem']) != 5)
