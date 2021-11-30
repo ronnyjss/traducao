@@ -10,8 +10,8 @@
 * @link			github.com/ronnyjss/traducao
 **/
 
-use Exception, ronnyjss\traducao;
+use Exception, ronnyjss\Traducao;
 
 try {
-	traducao::adicionarPO(__DIR__ . '/linguagem');
+	Traducao::adicionarPO(__DIR__ . '/linguagem');
 } catch(Exception $o_exception) {}
