@@ -3,8 +3,9 @@
 ![N|Solid](https://img.shields.io/badge/PHP-%5E7.2-RONNY?logo=php&logoColor=%23FFFFFF&style=flat-square&color=00ABFF)
 ![N|Solid](https://img.shields.io/github/license/ronnyjss/traducao?logo=github&logoColor=%23FFFFFF&style=flat-square&color=%2300ABFF&label=Licença)
 
-![N|Solid](https://img.shields.io/github/tag/ronnyjss/utilitario?logo=github&logoColor=%23FFFFFF&style=flat-square&color=00ABFF&label=Versão)
-![N|Solid](https://github.com/ronnyjss/traducao/actions/workflows/test.yaml/badge.svg)
+![N|Solid](https://img.shields.io/badge/Packagist-ronnyjss/traducao-RONNY?logo=packagist&logoColor=%23FFFFFF&style=flat-square&color=00ABFF)
+![N|Solid](https://img.shields.io/github/v/tag/ronnyjss/traducao.svg?color=00ABFF&label=Vers%C3%A3o&logo=github&logoColor=%23FFFFFF&sort=semver&style=flat-square)
+![N|Solid](https://img.shields.io/github/workflow/status/ronnyjss/traducao/Teste?label=Teste&logo=githubactions&logoColor=FFFFFF&style=flat-square)
 
 Criado por Ronny Santos ronny@jss.art.br (MIT License)
 
