@@ -12,7 +12,7 @@
 
 use ronnyjss\Traducao;
 
-require_once __DIR__ . 'vendor/autoload.php';
+require_once __DIR__ . '/vendor/autoload.php';
 
 /**
 * Informa ao sistema qual a linguagem a ser usada.
@@ -27,7 +27,7 @@ require_once __DIR__ . 'vendor/autoload.php';
 * Usado para casos em que o pacote especifico não é encontrado,
 * então o pacote internacional é selecionado.
 **/
-setlocale('English', 'en_US', 'en');
+setlocale(LC_ALL, 'English', 'en_US', 'en');
 
 /**
 * Informa a biblioteca a onde se encontra a pasta com os arquivos de linguagens disponiveis.
@@ -38,7 +38,7 @@ setlocale('English', 'en_US', 'en');
 *
 * Caso no setlocale, tenha sido informado a codificação,
 * ela tambem ira buscar mais dois arquivos adicionais.
-* Ex: setlocale('English.utf8', 'en_US.utf8', 'en.utf8');
+* Ex: setlocale(LC_ALL, 'English.utf8', 'en_US.utf8', 'en.utf8');
 * Ira buscar os arquivos nessa sequencia, o primeiro encontrado será utilizado:
 * 'en_US.utf8.po', 'en_US.po', 'en.utf8.po' e 'en.po'.
 **/
@@ -49,12 +49,13 @@ Traducao::adicionarPO(__DIR__ . '/linguagem');
 * pela respectiva tradução na linguagem atual.
 *
 * No primeiro parametro é informado a string que deve ser traduzida.
-* No segundo parametri é informado o dominio que incapsula o pacote da linguagem.
+* No segundo parametro é informado o dominio que incapsula o pacote da linguagem.
 *
 * Neste exemplo abaixo, ela irá retornar a frase:
 * 'Hello visitor, welcome to our system.'
 **/
 echo Traducao::traduzir('Ola Visitante, Bem vindo ao nosso sistema.', 'ronnyjssTraducaoExemplo');
+echo '</br>';
 
 /**
 * Recomendo altamente que seja criada uma função substituta do metodo nativo da lib,
