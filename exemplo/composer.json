@@ -1,0 +1,40 @@
+{
+	"name":					"ronnyjss/traducao-exemplo",
+	"version":				"1.0.0",
+	"description":			"Exemplo de uso da biblioteca Traducao",
+	"homepage":				"https://github.com/ronnyjss/traducao",
+	"license":				"MIT",
+	"type":					"project",
+	"time":					"2021-11-30",
+	"authors": [{
+		"name":		"RonnyJSS",
+		"role":		"developer",
+		"email":	"ronny@jss.art.br",
+		"homepage":	"https://github.com/ronnyjss"
+	}],
+	"repositories": [
+		{
+			"url": "https://github.com/ronnyjss/traducao.git",
+			"type": "git"
+		}
+	],
+	"require": {
+		"ronnyjss/traducao": "^1.0"
+	},
+	"autoload": {
+		"psr-4": {
+			"ronnyjss\\traducao\\exemplo\\": ""
+		}
+	},
+	"scripts": {
+		"php56": [
+			"/usr/local/bin/ea-php56 /opt/cpanel/composer/bin/composer"
+		],
+		"php74": [
+			"/usr/local/bin/ea-php74 /opt/cpanel/composer/bin/composer"
+		],
+		"php80": [
+			"/usr/local/bin/ea-php80 /opt/cpanel/composer/bin/composer"
+		]
+	}
+}

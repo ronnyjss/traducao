@@ -1,0 +1,29 @@
+# Tradução Inglês para o ronnyjss\traducao
+#
+# Copyright (c) 2021 RonnyJSS Santos
+# Este arquivo é distribuído sob a mesma licença do pacote ronnyjss\traducao.
+# Ronny Santos <ronny@jss.art.br>, 2021.
+#
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ronnyjssZoop\n"
+"POT-Creation-Date: 2021-11-24 10:27-0300\n"
+"PO-Revision-Date: 2021-11-24 15:57-0300\n"
+"Last-Translator: RonnyJSS <ronny@jss.art.br>\n"
+"Plural-Forms: nplurals=2; plural=n!=1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language-Team: \n"
+"Language: en\n"
+"X-Domain: ronnyjssTraducao\n"
+
+msgid "Já existe uma linguagem com o mesmo domínio."
+msgstr "There is already a language with the same domain."
+
+msgid "O arquivo não é um arquivo de linguagem, ou não pode ser interpretado corretamente."
+msgstr "The file is not a language file, or can not be interpreted correctly."
+
+msgid "O arquivo não existe."
+msgstr "The file does not exist."

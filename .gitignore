@@ -1,0 +1,17 @@
+composer.phar
+composer.lock
+/vendor/
+/exemplo/composer.lock
+/exemplo/vendor/
+*.cache
+
+# Arquivos de projeto VScode
+/.vscode/
+
+# Arquivos de projeto Eclipse
+/.settings/
+/.buildpath
+/.project
+
+# Arquivos de projeto PhpStorm
+/.idea/

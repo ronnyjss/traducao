@@ -1,0 +1,46 @@
+name: "Teste biblioteca Tradução"
+
+on:
+	push:
+		branches: [ master ]
+	pull_request:
+		branches: [ master ]
+
+jobs:
+	tests:
+		name: Teste
+		runs-on: ubuntu-latest
+
+		strategy:
+			matrix:
+				php:
+					- 7.2
+					- 7.3
+					- 7.4
+				composer-args: [ "" ]
+				include:
+					- php: 8.0
+						composer-args: --ignore-platform-reqs
+			fail-fast: false
+
+		steps:
+			- name: Checkout
+				uses: actions/checkout@v2
+
+			- name: Instalar PHP
+				uses: shivammathur/setup-php@v2
+				with:
+					php-version: ${{ matrix.php }}
+
+			- name: Dependências de cache do PHP
+				uses: actions/cache@v2
+				with:
+					path: vendor
+					key: ${{ runner.os }}-php-${{ matrix.php }}-composer-${{ hashFiles('**/composer.json') }}
+					restore-keys: ${{ runner.os }}-php-${{ matrix.php }}-composer-
+
+			- name: Instalar dependências
+				run: composer install --prefer-dist --no-progress --no-suggest ${{ matrix.composer-args }}
+
+			- name: Executar Testes
+				run: composer teste
