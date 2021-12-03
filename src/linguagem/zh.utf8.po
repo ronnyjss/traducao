@@ -1,4 +1,4 @@
-# Tradução Inglês (Estados Unidos) para o ronnyjss\traducao
+# Tradução Chinês para o ronnyjss\traducao
 #
 # Copyright (c) 2021 RonnyJSS Santos
 # Este arquivo é distribuído sob a mesma licença do pacote ronnyjss\traducao.
@@ -16,22 +16,17 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language-Team: \n"
-"Language: en\n"
+"Language: zh\n"
 "X-Domain: ronnyjssTraducao\n"
 
 msgid "linguagem.atual"
-msgstr "The current language is en_US."
-
-msgid "Um arquivo foi removido."
-msgid_plural "%s arquivos foram removidos."
-msgstr[0] "A file has been removed."
-msgstr[1] "%s files have been removed."
+msgstr "当前语言是ZH.UTF8。"
 
 msgid "Linguagem "%s" não suportada."
-msgstr "Language "%s" Not supported."
+msgstr "不支持"%s"语言。"
 
 msgid "O arquivo não é um arquivo de linguagem, ou não pode ser interpretado corretamente."
-msgstr "The file is not a language file, or can not be interpreted correctly."
+msgstr "该文件不是语言文件，或者无法正确解释。"
 
 msgid "Nenhum arquivo na linguagem %s foi encontrado."
-msgstr "No file in the %s language was found."
+msgstr "找不到"%s"语言中的文件。"

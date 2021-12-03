@@ -1,11 +1,12 @@
 # Biblioteca de Tradução
-![N|Solid](https://img.shields.io/badge/por-%40ronnyjss-RONNY?logo=xcode&logoColor=%23FFFFFF&style=flat-square&color=00ABFF)
-![N|Solid](https://img.shields.io/badge/PHP-%5E8.0-RONNY?logo=php&logoColor=%23FFFFFF&style=flat-square&color=00ABFF)
-![N|Solid](https://img.shields.io/github/license/ronnyjss/traducao?logo=github&logoColor=%23FFFFFF&style=flat-square&color=%2300ABFF&label=Licença)
 
-![N|Solid](https://img.shields.io/badge/Packagist-ronnyjss/traducao-RONNY?logo=packagist&logoColor=%23FFFFFF&style=flat-square&color=00ABFF)
-![N|Solid](https://img.shields.io/github/v/tag/ronnyjss/traducao.svg?color=00ABFF&label=Vers%C3%A3o&logo=github&logoColor=%23FFFFFF&sort=semver&style=flat-square)
-![N|Solid](https://img.shields.io/github/workflow/status/ronnyjss/traducao/Teste?label=Teste&logo=githubactions&logoColor=FFFFFF&style=flat-square)
+[![N|Solid](https://img.shields.io/badge/por-%40ronnyjss-RONNY?logo=xcode&logoColor=%23FFFFFF&style=flat-square&color=00ABFF)](https://github.com/ronnyjss)
+[![N|Solid](https://img.shields.io/badge/PHP-%5E8.0-RONNY?logo=php&logoColor=%23FFFFFF&style=flat-square&color=00ABFF)](https://www.php.net)
+[![N|Solid](https://img.shields.io/github/license/ronnyjss/traducao?logo=github&logoColor=%23FFFFFF&style=flat-square&color=%2300ABFF&label=Licença)](LICENSE)
+
+[![N|Solid](https://img.shields.io/badge/Packagist-ronnyjss/traducao-RONNY?logo=packagist&logoColor=%23FFFFFF&style=flat-square&color=00ABFF)](https://packagist.org/packages/ronnyjss/traducao)
+[![N|Solid](https://img.shields.io/github/v/tag/ronnyjss/traducao.svg?color=00ABFF&label=Vers%C3%A3o&logo=github&logoColor=%23FFFFFF&sort=semver&style=flat-square)](https://github.com/ronnyjss/traducao/releases)
+[![N|Solid](https://img.shields.io/github/workflow/status/ronnyjss/traducao/Teste?label=Teste&logo=githubactions&logoColor=FFFFFF&style=flat-square)](https://github.com/ronnyjss/traducao/actions)
 
 Criado por Ronny Santos ronny@jss.art.br (MIT License)
 
@@ -42,7 +43,7 @@ use ronnyjss\Traducao;
 * Usado para casos em que o pacote especifico não é encontrado,
 * então o pacote internacional é selecionado.
 **/
-setlocale('English', 'en_US', 'en');
+setlocale(LC_ALL_'en_US', 'en');
 
 /**
 * Informa a biblioteca a onde se encontra a pasta com os arquivos de linguagens disponiveis.
@@ -94,4 +95,4 @@ echo __('Ola Visitante, Bem vindo ao nosso sistema.');
 
 Por favor, veja o [Log de Alterações](CHANGELOG.md) para mais informações sobre mudanças recentes.
 
-Sob a Licença do MIT. Consulte [Licença](LICENÇA) para obter mais informações.
+Sob a Licença do MIT. Consulte [Licença](LICENSE) para obter mais informações.

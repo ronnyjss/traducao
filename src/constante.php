@@ -15,125 +15,605 @@ namespace ronnyjss\traducao;
 # Lista de linguagens utilizadas em servudir Linux/Windows.
 # https://www.gnu.org/software/gettext/manual/html_node/Usual-Language-Codes.html#Usual-Language-Codes
 # https://www.gnu.org/software/gettext/manual/html_node/Country-Codes.html#Country-Codes
+
 const LINGUAGENS = [
-	'af_ZA' => 'Afrikaans_South Africa',	# Afrikaans						# Afrikaans
-	'sq_AL' => 'Albanian_Albania',			# Albanês
-	'ar_DZ' => 'Arabic_Algeria',			# Árabe (Argélia)
-	'ar_BH' => 'Arabic_Bahrain',			# Árabe (Bahrein)
-	'ar_EG' => 'Arabic_Egypt',				# Árabe (Egito)
-	'ar_IQ' => 'Arabic_Iraq',				# Árabe (Iraque)
-	'ar_JO' => 'Arabic_Jordan',				# Árabe (Jordânia)
-	'ar_KW' => 'Arabic_Kuwait',				# Árabe (Kuwait)
-	'ar_LB' => 'Arabic_Lebanon',			# Árabe (Líbano)
-	'ar_LY' => 'Arabic_Libya',				# Árabe (Líbia)
-	'ar_MA' => 'Arabic_Morocco',			# Árabe (Marrocos)
-	'ar_OM' => 'Arabic_Oman',				# Árabe (Omã)
-	'ar_QA' => 'Arabic_Qatar',				# Árabe (Catar)
-	'ar_SA' => 'Arabic_Saudi_Arabia',		# Árabe (Arábia Saudita)
-	'ar_SD' => 'Arabic_Sudan',				# Árabe (Sudão)
-	'ar_SY' => 'Arabic_Syria',				# Árabe (Síria)
-	'ar_TN' => 'Arabic_Tunisia',			# Árabe (Tunísia)
-	'ar_AE' => 'Arabic_UAE',				# Árabe (Emirados Árabes Unidos)
-	'ar_YE' => 'Arabic_Yemen',				# Árabe (Iémen)
-	'eu_ES' => 'Basque_Spain',				# Basco (Espanha)
-	'be_BY' => 'Belarusian_Belarus',		# Bielorusso (Bielorrússia)
-	'bg_BG' => 'Bulgarian_Bulgaria',		# Búlgaro (Bulgária)
-	'ca_ES' => 'Catalan_Spain',				# Catalão (Espanha)
-	'zh_TW' => 'Chinese_Taiwan',			# Chinês (Taiwan)
-	'zh_HK' => 'Chinese_Hong_Kong',			# Chinês (Hong Kong)
-	'zh_CN' => 'Chinese_China',				# Chinês (China)
-	'zh_SG' => 'Chinese_Singapore',			# Chinês (Singapura)
-	'hr_HR' => 'Croatian_Croatia',			# Croata (Croácia)
-	'cs_CZ' => 'Czech_Czech_Republic',		# Checo (República Checa)
-	'da_DK' => 'Danish_Denmark',			# Dinamarquês (Dinamarca)
-	'pt_BR' => 'Portuguese_Brazil',			# Português (Brasil)
-	'nl_NL' => 'Dutch_Netherlands',			# Holandês (Holanda)
-	'nl_BE' => 'Dutch_Belgium',				# Holandês (Bélgica)
-	'en_GB' => 'English_United Kingdom',	# Inglês (Reino Unido)
-	'en_AU' => 'English_Australia',			# Inglês (Austrália)
-	'en_BW' => 'English_Botswana',			# Inglês (Botsuana)
-	'en_CA' => 'English_Canada',			# Inglês (Canadá)
-	'en_DK' => 'English_Denmark',			# Inglês (Dinamarca)
-	'en_IE' => 'English_Ireland',			# Inglês (Irlanda)
-	'en_NZ' => 'English_New Zealand',		# Inglês (Nova Zelândia)
-	'en_PH' => 'English_Philippines',		# Inglês (Filipinas)
-	'en_ZA' => 'English_South Africa',		# Inglês (África do Sul)
-	'en_US' => 'English_United States',		# Inglês (Estados Unidos)		# English
-	'en_ZW' => 'English_Zimbabwe',			# Inglês (Zimbábue)
-	'et_EE' => 'Estonian_Estonia',			# Estone (Estônia)
-	'fo_FO' => 'Faroese_Faroe Islands',		# Faroês (Ilhas Faroé)
-	'fa_IR' => 'Farsi_Iran',				# Persa (Irã)
-	'fi_FI' => 'Finnish_Finland',			# Finlandês (Finlândia)
-	'fr_FR' => 'French_France',				# Francês (França)
-	'fr_BE' => 'French_Belgium',			# Francês (Bélgica)
-	'fr_CA' => 'French_Canada',				# Francês (Canadá)
-	'fr_LU' => 'French_Luxembourg',			# Francês (Luxemburgo)
-	'fr_CH' => 'French_Switzerland',		# Francês (Suíça)
-	'gl_ES' => 'Galician_Spain',			# Galego (Espanha)
-	'ka_GE' => 'Georgian_Georgia',			# Geórgio (Geórgia)
-	'de_DE' => 'German_Germany',			# Alemão (Alemanha)
-	'de_AT' => 'German_Austria',			# Alemão (Áustria)
-	'de_BE' => 'German_Belgium',			# Alemão (Bélgica)
-	'de_LU' => 'German_Luxembourg',			# Alemão (Luxemburgo)
-	'de_CH' => 'German_Switzerland',		# Alemão (Suíça)
-	'el_GR' => 'Greek_Greece',				# Grego (Grécia)
-	'kl_GL' => 'Greenlandic_Greenland',		# Greenlandês (Groenlândia)
-	'hu_HU' => 'Hungarian_Hungary',			# Húngaro (Hungria)
-	'is_IS' => 'Icelandic_Iceland',			# Islandês (Islândia)
-	'id_ID' => 'Indonesian_Indonesia',		# Indonésio (Indonésia)
-	'ga_IE' => 'Irish_Ireland',				# Irlandês (Irlanda)
-	'it_IT' => 'Italian_Italy',				# Italiano (Itália)
-	'it_CH' => 'Italian_Switzerland',		# Italiano (Suíça)
-	'ja_JP' => 'Japanese_Japan',			# Japonês (Japão)
-	'ks_IN' => 'Kashmiri_India',			# Caxemira (Índia)
-	'kw_GB' => 'Cornish_Britain',			# Cornico (Reino Unido)
-	'ko_KR' => 'Korean_Korea',				# Coreano (Coreia do Sul)
-	'ku_TR' => 'Kurdish_Turkey',			# Curdu (Turquia)
-	'lv_LV' => 'Latvian_Latvia',			# Letão (Letônia)
-	'lt_LT' => 'Lithuanian_Lithuania',		# Lituano (Lituânia)
-	'mk_MK' => 'Macedonian_Macedonia',		# Macedônio (Macedónia)
-	'ms_MY' => 'Malay_Malaysia',			# Malaio (Malásia)
-	'mt_MT' => 'Maltese_Malta',				# Maltês (Malta)
-	'mr_IN' => 'Marathi_India',				# Marathi (Índia)
-	'ne_NP' => 'Nepali_Nepal',				# Nepali (Nepal)
-	'nb_NO' => 'Norwegian_Norway',			# Norueguês (Noruega)
-	'nn_NO' => 'Norwegian_Nynorsk',			# Norueguês (Nova Noruega)
-	'pl_PL' => 'Polish_Poland',				# Polonês (Polônia)
-	'pt_PT' => 'Portuguese_Portugal',		# Português (Portugal)
-	'ro_RO' => 'Romanian_Romania',			# Romeno (Romênia)
-	'ru_RU' => 'Russian_Russia',			# Russo (Rússia)
-	'ru_UA' => 'Russian_Ukraine',			# Russo (Ucrânia)
-	'se_NO' => 'NorthernSami_Norway',		# Sámi do Norte (Noruega)
-	'sk_SK' => 'Slovak_Slovakia',			# Eslovaco (Eslováquia)
-	'sl_SI' => 'Slovenian_Slovenia',		# Esloveno (Eslovênia)
-	'es_ES' => 'Spanish_Spain',				# Espanhol (Espanha)
-	'es_AR' => 'Spanish_Argentina',			# Espanhol (Argentina)
-	'es_BO' => 'Spanish_Bolivia',			# Espanhol (Bolívia)
-	'es_CL' => 'Spanish_Chile',				# Espanhol (Chile)
-	'es_CO' => 'Spanish_Colombia',			# Espanhol (Colômbia)
-	'es_CR' => 'Spanish_CostaRica',			# Espanhol (Costa Rica)
-	'es_DO' => 'Spanish_DominicanRepublic',	# Espanhol (República Dominicana)
-	'es_EC' => 'Spanish_Ecuador',			# Espanhol (Equador)
-	'es_SV' => 'Spanish_ElSalvador',		# Espanhol (El Salvador)
-	'es_GT' => 'Spanish_Guatemala',			# Espanhol (Guatemala)
-	'es_HN' => 'Spanish_Honduras',			# Espanhol (Honduras)
-	'es_MX' => 'Spanish_Mexico',			# Espanhol (México)
-	'es_NI' => 'Spanish_Nicaragua',			# Espanhol (Nicarágua)
-	'es_PA' => 'Spanish_Panama',			# Espanhol (Panamá)
-	'es_PY' => 'Spanish_Paraguay',			# Espanhol (Paraguai)
-	'es_PE' => 'Spanish_Peru',				# Espanhol (Peru)
-	'es_PR' => 'Spanish_PuertoRico',		# Espanhol (Porto Rico)
-	'es_UY' => 'Spanish_Uruguay',			# Espanhol (Uruguai)
-	'es_US' => 'Spanish_UnitedStates',		# Espanhol (Estados Unidos)
-	'es_VE' => 'Spanish_Venezuela',			# Espanhol (Venezuela)
-	'sw_KE' => 'Swahili_Kenya',				# Suaíli (Quênia)
-	'sv_SE' => 'Swedish_Sweden',			# Sueco (Suécia)
-	'sv_FI' => 'Swedish_Finland',			# Sueco (Finlândia)
-	'tl_PH' => 'Tagalog_Philippines',		# Tagalo (Filipinas)
-	'th_TH' => 'Thai_Thailand',				# Tai (Tailândia)
-	'tr_TR' => 'Turkish_Turkey',			# Turco (Turquia)
-	'uk_UA' => 'Ukrainian_Ukraine',			# Ucraniano (Ucrânia)
-	'ur_IN' => 'Urdu_India',				# Urdu (Índia)
-	'ur_PK' => 'Urdu_Pakistan',				# Urdu (Paquistão)
-	'vi_VN' => 'Vietnamese_Vietnam'			# Vietnamita (Vietnã)
+	'aa' => [	# Afar
+		'DJ',	# Afar (Djibuti)
+		'ER',	# Afar (Eritreia)
+		'ET',	# Afar (Etiópia)
+	],
+	'af' => [	# Africâner
+		'ZA',	# Africâner (África do Sul)
+	],
+	'am' => [	# Amárico
+		'ET',	# Amárico (Etiópia)
+	],
+	'an' => [	# Aragonês
+		'ES',	# Aragonês (Espanha)
+	],
+	'ar' => [	# Árabe
+		'AE',	# Árabe (Emirados Árabes Unidos)
+		'BH',	# Árabe (Barein)
+		'DZ',	# Árabe (Argélia)
+		'EG',	# Árabe (Egito)
+		'IN',	# Árabe (Índia)
+		'IQ',	# Árabe (Iraque)
+		'JO',	# Árabe (Jordânia)
+		'KW',	# Árabe (Kuwait)
+		'LB',	# Árabe (Líbano)
+		'LY',	# Árabe (Líbia)
+		'MA',	# Árabe (Marrocos)
+		'OM',	# Árabe (Omã)
+		'QA',	# Árabe (Catar)
+		'SA',	# Árabe (Arábia Saudita)
+		'SD',	# Árabe (Sudão)
+		'SY',	# Árabe (Síria)
+		'TN',	# Árabe (Tunísia)
+		'YE',	# Árabe (Iêmen)
+	],
+	'as' => [	# Assamês
+		'IN',	# Assamês (Índia)
+	],
+	'ast' => [	# Asturiano
+		'ES',	# Asturiano (Espanha)
+	],
+	'ayc' => [	# Ayc
+		'PE',	# Ayc (Peru)
+	],
+	'az' => [	# Azerbaijano
+		'AZ',	# Azerbaijano (Azerbaijão)
+	],
+	'be' => [	# Bielorrusso
+		'BY',	# Bielorrusso (Bielorrússia)
+	],
+	'bem' => [	# Bemba
+		'ZM',	# Bemba (Zâmbia)
+	],
+	'ber' => [	# Ber
+		'MA',	# Ber (Marrocos)
+	],
+	'bg' => [	# Búlgaro
+		'BG',	# Búlgaro (Bulgária)
+	],
+	'bho' => [	# Bhojpuri
+		'IN',	# Bhojpuri (Índia)
+	],
+	'bn' => [	# Bengali
+		'BD',	# Bengali (Bangladesh)
+		'IN',	# Bengali (Índia)
+	],
+	'bo' => [	# Tibetano
+		'CN',	# Tibetano (China)
+		'IN',	# Tibetano (Índia)
+	],
+	'br' => [	# Bretão
+		'FR',	# Bretão (França)
+	],
+	'brx' => [	# Bodo
+		'IN',	# Bodo (Índia)
+	],
+	'bs' => [	# Bósnio
+		'BA',	# Bósnio (Bósnia e Herzegovina)
+	],
+	'byn' => [	# Blin
+		'ER',	# Blin (Eritreia)
+	],
+	'ca' => [	# Catalão
+		'AD',	# Catalão (Andorra)
+		'ES',	# Catalão (Espanha)
+		'FR',	# Catalão (França)
+		'IT',	# Catalão (Itália)
+	],
+	'crh' => [	# Turco da Crimeia
+		'UA',	# Turco da Crimeia (Ucrânia)
+	],
+	'cs' => [	# Tcheco
+		'CZ',	# Tcheco (Tchéquia)
+	],
+	'csb' => [	# Kashubian
+		'PL',	# Kashubian (Polônia)
+	],
+	'cv' => [	# Tchuvache
+		'RU',	# Tchuvache (Rússia)
+	],
+	'cy' => [	# Galês
+		'GB',	# Galês (Reino Unido)
+	],
+	'da' => [	# Dinamarquês
+		'DK',	# Dinamarquês (Dinamarca)
+	],
+	'de' => [	# Alemão
+		'AT',	# Alemão (Áustria)
+		'BE',	# Alemão (Bélgica)
+		'CH',	# Alemão (Suíça)
+		'DE',	# Alemão (Alemanha)
+		'LU',	# Alemão (Luxemburgo)
+	],
+	'doi' => [	# Dogri
+		'IN',	# Dogri (Índia)
+	],
+	'dv' => [	# Divehi
+		'MV',	# Divehi (Maldivas)
+	],
+	'dz' => [	# Dzonga
+		'BT',	# Dzonga (Butão)
+	],
+	'el' => [	# Grego
+		'CY',	# Grego (Chipre)
+		'GR',	# Grego (Grécia)
+	],
+	'en' => [	# Inglês
+		'US',	# Inglês (Estados Unidos)
+		'AG',	# Inglês (Antígua e Barbuda)
+		'AU',	# Inglês (Austrália)
+		'BW',	# Inglês (Botsuana)
+		'CA',	# Inglês (Canadá)
+		'DK',	# Inglês (Dinamarca)
+		'GB',	# Inglês (Reino Unido)
+		'HK',	# Inglês (Hong Kong,RAE da China)
+		'IE',	# Inglês (Irlanda)
+		'IN',	# Inglês (Índia)
+		'NG',	# Inglês (Nigéria)
+		'NZ',	# Inglês (Nova Zelândia)
+		'PH',	# Inglês (Filipinas)
+		'SG',	# Inglês (Singapura)
+		'ZA',	# Inglês (África do Sul)
+		'ZM',	# Inglês (Zâmbia)
+		'ZW',	# Inglês (Zimbábue)
+	],
+	'es' => [	# Espanhol
+		'ES',	# Espanhol (Espanha)
+		'AR',	# Espanhol (Argentina)
+		'BO',	# Espanhol (Bolívia)
+		'CL',	# Espanhol (Chile)
+		'CO',	# Espanhol (Colômbia)
+		'CR',	# Espanhol (Costa Rica)
+		'CU',	# Espanhol (Cuba)
+		'DO',	# Espanhol (República Dominicana)
+		'EC',	# Espanhol (Equador)
+		'GT',	# Espanhol (Guatemala)
+		'HN',	# Espanhol (Honduras)
+		'MX',	# Espanhol (México)
+		'NI',	# Espanhol (Nicarágua)
+		'PA',	# Espanhol (Panamá)
+		'PE',	# Espanhol (Peru)
+		'PR',	# Espanhol (Porto Rico)
+		'PY',	# Espanhol (Paraguai)
+		'SV',	# Espanhol (El Salvador)
+		'US',	# Espanhol (Estados Unidos)
+		'UY',	# Espanhol (Uruguai)
+		'VE',	# Espanhol (Venezuela)
+	],
+	'et' => [	# Estoniano
+		'EE',	# Estoniano (Estônia)
+	],
+	'eu' => [	# Basco
+		'ES',	# Basco (Espanha)
+	],
+	'fa' => [	# Persa
+		'IR',	# Persa (Irã)
+	],
+	'ff' => [	# Fula
+		'SN',	# Fula (Senegal)
+	],
+	'fi' => [	# Finlandês
+		'FI',	# Finlandês (Finlândia)
+	],
+	'fil' => [	# Filipino
+		'PH',	# Filipino (Filipinas)
+	],
+	'fo' => [	# Feroês
+		'FO',	# Feroês (Ilhas Faroé)
+	],
+	'fr' => [	# Francês
+		'FR',	# Francês (França)
+		'BE',	# Francês (Bélgica)
+		'CA',	# Francês (Canadá)
+		'CH',	# Francês (Suíça)
+		'LU',	# Francês (Luxemburgo)
+	],
+	'fur' => [	# Friulano
+		'IT',	# Friulano (Itália)
+	],
+	'fy' => [	# Frísio ocidental
+		'DE',	# Frísio ocidental (Alemanha)
+		'NL',	# Frísio ocidental (Países Baixos)
+	],
+	'ga' => [	# Irlandês
+		'IE',	# Irlandês (Irlanda)
+	],
+	'gd' => [	# Gaélico escocês
+		'GB',	# Gaélico escocês (Reino Unido)
+	],
+	'gez' => [	# Geez
+		'ER',	# Geez (Eritreia)
+		'ET',	# Geez (Etiópia)
+	],
+	'gl' => [	# Galego
+		'ES',	# Galego (Espanha)
+	],
+	'gu' => [	# Guzerate
+		'IN',	# Guzerate (Índia)
+	],
+	'gv' => [	# Manx
+		'GB',	# Manx (Reino Unido)
+	],
+	'ha' => [	# Hauçá
+		'NG',	# Hauçá (Nigéria)
+	],
+	'he' => [	# Hebraico
+		'IL',	# Hebraico (Israel)
+	],
+	'hi' => [	# Híndi
+		'IN',	# Híndi (Índia)
+	],
+	'hne' => [	# Hne
+		'IN',	# Hne (Índia)
+	],
+	'hr' => [	# Croata
+		'HR',	# Croata (Croácia)
+	],
+	'hsb' => [	# Alto sorábio
+		'DE',	# Alto sorábio (Alemanha)
+	],
+	'ht' => [	# Haitiano
+		'HT',	# Haitiano (Haiti)
+	],
+	'hu' => [	# Húngaro
+		'HU',	# Húngaro (Hungria)
+	],
+	'hy' => [	# Armênio
+		'AM',	# Armênio (Armênia)
+	],
+	'ia' => [	# Interlíngua
+		'FR',	# Interlíngua (França)
+	],
+	'id' => [	# Indonésio
+		'ID',	# Indonésio (Indonésia)
+	],
+	'ig' => [	# Igbo
+		'NG',	# Igbo (Nigéria)
+	],
+	'ik' => [	# Inupiaque
+		'CA',	# Inupiaque (Canadá)
+	],
+	'is' => [	# Islandês
+		'IS',	# Islandês (Islândia)
+	],
+	'it' => [	# Italiano
+		'IT',	# Italiano (Itália)
+		'CH',	# Italiano (Suíça)
+	],
+	'iu' => [	# Inuktitut
+		'CA',	# Inuktitut (Canadá)
+	],
+	'iw' => [	# Hebraico
+		'IL',	# Hebraico (Israel)
+	],
+	'ja' => [	# Japonês
+		'JP',	# Japonês (Japão)
+	],
+	'ka' => [	# Georgiano
+		'GE',	# Georgiano (Geórgia)
+	],
+	'kk' => [	# Cazaque
+		'KZ',	# Cazaque (Cazaquistão)
+	],
+	'kl' => [	# Groenlandês
+		'GL',	# Groenlandês (Groenlândia)
+	],
+	'km' => [	# Khmer
+		'KH',	# Khmer (Camboja)
+	],
+	'kn' => [	# Canarim
+		'IN',	# Canarim (Índia)
+	],
+	'ko' => [	# Coreano
+		'KR',	# Coreano (Coreia do Sul)
+	],
+	'kok' => [	# Concani
+		'IN',	# Concani (Índia)
+	],
+	'ks' => [	# Caxemira
+		'IN',	# Caxemira (Índia)
+	],
+	'ku' => [	# Curdo
+		'TR',	# Curdo (Turquia)
+	],
+	'kw' => [	# Córnico
+		'GB',	# Córnico (Reino Unido)
+	],
+	'ky' => [	# Quirguiz
+		'KG',	# Quirguiz (Quirguistão)
+	],
+	'lb' => [	# Luxemburguês
+		'LU',	# Luxemburguês (Luxemburgo)
+	],
+	'lg' => [	# Luganda
+		'UG',	# Luganda (Uganda)
+	],
+	'li' => [	# Limburguês
+		'BE',	# Limburguês (Bélgica)
+		'NL',	# Limburguês (Países Baixos)
+	],
+	'lij' => [	# Lij
+		'IT',	# Lij (Itália)
+	],
+	'lo' => [	# Laosiano
+		'LA',	# Laosiano (Laos)
+	],
+	'lt' => [	# Lituano
+		'LT',	# Lituano (Lituânia)
+	],
+	'lv' => [	# Letão
+		'LV',	# Letão (Letônia)
+	],
+	'mag' => [	# Magahi
+		'IN',	# Magahi (Índia)
+	],
+	'mai' => [	# Maithili
+		'IN',	# Maithili (Índia)
+	],
+	'mg' => [	# Malgaxe
+		'MG',	# Malgaxe (Madagascar)
+	],
+	'mhr' => [	# Mhr
+		'RU',	# Mhr (Rússia)
+	],
+	'mi' => [	# Maori
+		'NZ',	# Maori (Nova Zelândia)
+	],
+	'mk' => [	# Macedônio
+		'MK',	# Macedônio (Macedônia do Norte)
+	],
+	'ml' => [	# Malaiala
+		'IN',	# Malaiala (Índia)
+	],
+	'mn' => [	# Mongol
+		'MN',	# Mongol (Mongólia)
+	],
+	'mni' => [	# Manipuri
+		'IN',	# Manipuri (Índia)
+	],
+	'mr' => [	# Marati
+		'IN',	# Marati (Índia)
+	],
+	'ms' => [	# Malaio
+		'MY',	# Malaio (Malásia)
+	],
+	'mt' => [	# Maltês
+		'MT',	# Maltês (Malta)
+	],
+	'my' => [	# Birmanês
+		'MM',	# Birmanês (Mianmar [Birmânia])
+	],
+	'nan' => [	# Min nan
+		'TW',	# Min nan (Taiwan)
+	],
+	'nb' => [	# Bokmål norueguês
+		'NO',	# Bokmål norueguês (Noruega)
+	],
+	'nds' => [	# Baixo alemão
+		'DE',	# Baixo alemão (Alemanha)
+		'NL',	# Baixo alemão (Países Baixos)
+	],
+	'ne' => [	# Nepalês
+		'NP',	# Nepalês (Nepal)
+	],
+	'nhn' => [	# Nhn
+		'MX',	# Nhn (México)
+	],
+	'niu' => [	# Niueano
+		'NU',	# Niueano (Niue)
+		'NZ',	# Niueano (Nova Zelândia)
+	],
+	'nl' => [	# Holandês
+		'AW',	# Holandês (Aruba)
+		'BE',	# Holandês (Bélgica)
+		'NL',	# Holandês (Países Baixos)
+	],
+	'nn' => [	# Nynorsk norueguês
+		'NO',	# Nynorsk norueguês (Noruega)
+	],
+	'no' => [	# Norueguês
+		'NO',	# Norueguês (Noruega)
+	],
+	'nr' => [	# Ndebele do sul
+		'ZA',	# Ndebele do sul (África do Sul)
+	],
+	'nso' => [	# Soto setentrional
+		'ZA',	# Soto setentrional (África do Sul)
+	],
+	'oc' => [	# Occitânico
+		'FR',	# Occitânico (França)
+	],
+	'om' => [	# Oromo
+		'ET',	# Oromo (Etiópia)
+		'KE',	# Oromo (Quênia)
+	],
+	'or' => [	# Oriá
+		'IN',	# Oriá (Índia)
+	],
+	'os' => [	# Osseto
+		'RU',	# Osseto (Rússia)
+	],
+	'pa' => [	# Panjabi
+		'IN',	# Panjabi (Índia)
+		'PK',	# Panjabi (Paquistão)
+	],
+	'pap' => [	# Papiamento
+		'AN',	# Papiamento (Curaçao)
+	],
+	'pl' => [	# Polonês
+		'PL',	# Polonês (Polônia)
+	],
+	'ps' => [	# Pashto
+		'AF',	# Pashto (Afeganistão)
+	],
+	'pt' => [	# Português
+		'PT',	# Português (Portugal)
+		'BR',	# Português (Brasil)
+	],
+	'ro' => [	# Romeno
+		'RO',	# Romeno (Romênia)
+	],
+	'ru' => [	# Russo
+		'RU',	# Russo (Rússia)
+		'UA',	# Russo (Ucrânia)
+	],
+	'rw' => [	# Quiniaruanda
+		'RW',	# Quiniaruanda (Ruanda)
+	],
+	'sa' => [	# Sânscrito
+		'IN',	# Sânscrito (Índia)
+	],
+	'sat' => [	# Santali
+		'IN',	# Santali (Índia)
+	],
+	'sc' => [	# Sardo
+		'IT',	# Sardo (Itália)
+	],
+	'sd' => [	# Sindi
+		'IN',	# Sindi (Índia)
+	],
+	'se' => [	# Sami setentrional
+		'NO',	# Sami setentrional (Noruega)
+	],
+	'shs' => [	# Shs
+		'CA',	# Shs (Canadá)
+	],
+	'si' => [	# Cingalês
+		'LK',	# Cingalês (Sri Lanka)
+	],
+	'sid' => [	# Sidamo
+		'ET',	# Sidamo (Etiópia)
+	],
+	'sk' => [	# Eslovaco
+		'SK',	# Eslovaco (Eslováquia)
+	],
+	'sl' => [	# Esloveno
+		'SI',	# Esloveno (Eslovênia)
+	],
+	'so' => [	# Somali
+		'SO',	# Somali (Somália)
+		'DJ',	# Somali (Djibuti)
+		'ET',	# Somali (Etiópia)
+		'KE',	# Somali (Quênia)
+	],
+	'sq' => [	# Albanês
+		'AL',	# Albanês (Albânia)
+		'MK',	# Albanês (Macedônia do Norte)
+	],
+	'sr' => [	# Sérvio
+		'ME',	# Sérvio (Montenegro)
+		'RS',	# Sérvio (Sérvia)
+	],
+	'ss' => [	# Suázi
+		'ZA',	# Suázi (África do Sul)
+	],
+	'st' => [	# Soto do sul
+		'ZA',	# Soto do sul (África do Sul)
+	],
+	'sv' => [	# Sueco
+		'FI',	# Sueco (Finlândia)
+		'SE',	# Sueco (Suécia)
+	],
+	'sw' => [	# Suaíli
+		'KE',	# Suaíli (Quênia)
+		'TZ',	# Suaíli (Tanzânia)
+	],
+	'szl' => [	# Szl
+		'PL',	# Szl (Polônia)
+	],
+	'ta' => [	# Tâmil
+		'IN',	# Tâmil (Índia)
+		'LK',	# Tâmil (Sri Lanka)
+	],
+	'te' => [	# Télugo
+		'IN',	# Télugo (Índia)
+	],
+	'tg' => [	# Tadjique
+		'TJ',	# Tadjique (Tadjiquistão)
+	],
+	'th' => [	# Tailandês
+		'TH',	# Tailandês (Tailândia)
+	],
+	'ti' => [	# Tigrínia
+		'ER',	# Tigrínia (Eritreia)
+		'ET',	# Tigrínia (Etiópia)
+	],
+	'tig' => [	# Tigré
+		'ER',	# Tigré (Eritreia)
+	],
+	'tk' => [	# Turcomeno
+		'TM',	# Turcomeno (Turcomenistão)
+	],
+	'tl' => [	# Tagalo
+		'PH',	# Tagalo (Filipinas)
+	],
+	'tr' => [	# Turco
+		'CY',	# Turco (Chipre)
+		'TR',	# Turco (Turquia)
+	],
+	'ts' => [	# Tsonga
+		'ZA',	# Tsonga (África do Sul)
+	],
+	'tt' => [	# Tártaro
+		'RU',	# Tártaro (Rússia)
+	],
+	'ug' => [	# Uigur
+		'CN',	# Uigur (China)
+	],
+	'uk' => [	# Ucraniano
+		'UA',	# Ucraniano (Ucrânia)
+	],
+	'unm' => [	# Unm
+		'US',	# Unm (Estados Unidos)
+	],
+	'ur' => [	# Urdu
+		'IN',	# Urdu (Índia)
+		'PK',	# Urdu (Paquistão)
+	],
+	'uz' => [	# Uzbeque
+		'UZ',	# Uzbeque (Uzbequistão)
+	],
+	've' => [	# Venda
+		'ZA',	# Venda (África do Sul)
+	],
+	'vi' => [	# Vietnamita
+		'VN',	# Vietnamita (Vietnã)
+	],
+	'wa' => [	# Valão
+		'BE',	# Valão (Bélgica)
+	],
+	'wae' => [	# Walser
+		'CH',	# Walser (Suíça)
+	],
+	'wal' => [	# Wolaytta
+		'ET',	# Wolaytta (Etiópia)
+	],
+	'wo' => [	# Uolofe
+		'SN',	# Uolofe (Senegal)
+	],
+	'xh' => [	# Xhosa
+		'ZA',	# Xhosa (África do Sul)
+	],
+	'yi' => [	# Iídiche
+		'US',	# Iídiche (Estados Unidos)
+	],
+	'yo' => [	# Iorubá
+		'NG',	# Iorubá (Nigéria)
+	],
+	'yue' => [	# Cantonês
+		'HK',	# Cantonês (Hong Kong,RAE da China)
+	],
+	'zh' => [	# Chinês
+		'CN',	# Chinês (China)
+		'HK',	# Chinês (Hong Kong,RAE da China)
+		'SG',	# Chinês (Singapura)
+		'TW',	# Chinês (Taiwan)
+	],
+	'zu' => [	# Zulu
+		'ZA',	# Zulu (África do Sul)
+	],
 ];

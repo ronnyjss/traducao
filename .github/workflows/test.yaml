@@ -15,6 +15,7 @@ jobs:
       matrix:
         php:
           - 8.0
+          - 8.1
         composer-args: [ "" ]
       fail-fast: false
 
@@ -41,7 +42,7 @@ jobs:
         run: |
            sudo apt-get update
            sudo apt-get install tzdata locales -y
-           sudo locale-gen pt_BR.UTF-8 en_US.UTF-8 es_PY.UTF-8 ru_RU.UTF-8 af_ZA.UTF-8 pt_BR en_US es_PY ru_RU af_ZA
+           sudo locale-gen uk_UA pt_PT.utf8 en_US en_US.utf8 zh_CN.utf8 zh.utf8 es_ES es_ES.utf8 es ar_AE.utf8 ar.utf8 pt_PT de_LU.utf8 fr fr.utf8
            sudo update-locale
            echo "Todas as linguagens..."
            locale -a
