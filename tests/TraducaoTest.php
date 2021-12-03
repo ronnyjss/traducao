@@ -105,20 +105,12 @@ class TraducaoTest extends TestCase
 	* Entrada: zh_CN.utf8
 	* Retorno: zh.utf8
 	*
-	* Entrada: zh.utf8
-	* Retorno: zh.utf8
-	*
 	* @return void
 	**/
 	public function testTraducaoEtapa3(
 	) {
 		$this->executarTestePadrao(
 			'zh_CN.utf8',
-			'当前语言是ZH.UTF8。'
-		);
-
-		$this->executarTestePadrao(
-			'zh.utf8',
 			'当前语言是ZH.UTF8。'
 		);
 	}
@@ -130,9 +122,6 @@ class TraducaoTest extends TestCase
 	* Retorno: es
 	*
 	* Entrada: es_ES.utf8
-	* Retorno: es
-	*
-	* Entrada: es
 	* Retorno: es
 	*
 	* @return void
@@ -148,11 +137,6 @@ class TraducaoTest extends TestCase
 			'es_ES.utf8',
 			'El idioma actual es ES.'
 		);
-
-		$this->executarTestePadrao(
-			'es',
-			'El idioma actual es ES.'
-		);
 	}
 
 	/**
@@ -161,20 +145,12 @@ class TraducaoTest extends TestCase
 	* Entrada: ar_AE.utf8
 	* Retorno: ar_EG.utf8
 	*
-	* Entrada: ar.utf8
-	* Retorno: ar_EG.utf8
-	*
 	* @return void
 	**/
 	public function testTraducaoEtapa5(
 	) {
 		$this->executarTestePadrao(
 			'ar_AE.utf8',
-			'اللغة الحالية هي ar_EG.'
-		);
-
-		$this->executarTestePadrao(
-			'ar.utf8',
 			'اللغة الحالية هي ar_EG.'
 		);
 	}
@@ -188,12 +164,6 @@ class TraducaoTest extends TestCase
 	* Entrada: de_LU.utf8
 	* Retorno: de_CH
 	*
-	* Entrada: fr
-	* Retorno: fr_FR
-	*
-	* Entrada: fr.utf8
-	* Retorno: fr_FR
-	*
 	* @return void
 	**/
 	public function testTraducaoEtapa6(
@@ -206,16 +176,6 @@ class TraducaoTest extends TestCase
 		$this->executarTestePadrao(
 			'de_LU.utf8',
 			'Die aktuelle Sprache ist de_CH.'
-		);
-
-		$this->executarTestePadrao(
-			'fr',
-			'La langue actuelle est fr_FR.'
-		);
-
-		$this->executarTestePadrao(
-			'fr.utf8',
-			'La langue actuelle est fr_FR.'
 		);
 	}
 

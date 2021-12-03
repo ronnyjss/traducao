@@ -38,3 +38,6 @@ e este projeto adere ao [Controle de Versão Semântica](https://semver.org/spec
 - Listagem de linguagens e regiões no arquivo de constantes.
 - Testes, que eram feitos de maneira rasa, agora feitos de maneira mais ampla.
 - Forma de busca pelos arquivos de linguagem.
+
+## Removido
+- Testes imprecisos.
