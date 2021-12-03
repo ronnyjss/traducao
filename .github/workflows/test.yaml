@@ -42,7 +42,7 @@ jobs:
         run: |
            sudo apt-get update
            sudo apt-get install tzdata locales -y
-           sudo locale-gen uk_UA pt_PT.utf8 en_US en_US.utf8 zh_CN.utf8 zh.utf8 es_ES es_ES.utf8 es ar_AE.utf8 ar.utf8 pt_PT de_LU.utf8 fr fr.utf8
+           sudo locale-gen uk_UA pt_PT.UTF-8 en_US en_US.UTF-8 zh_CN.UTF-8 zh.UTF-8 es_ES es_ES.UTF-8 es ar_AE.UTF-8 ar.UTF-8 pt_PT de_LU.UTF-8 fr fr.UTF-8
            sudo update-locale
            echo "Todas as linguagens..."
            locale -a
